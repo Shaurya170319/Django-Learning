@@ -19,12 +19,14 @@ Through this project, I gained practical experience in connecting the frontend w
 ## 📚 What I Learned
 
 ### 1. Understanding Django Basics
+
 - Introduction to Django and its architecture.
 - Understanding Django projects and applications.
 - Working with URLs, views, and templates.
 - Understanding how requests and responses work.
 
 ### 2. Working with Models (models.py)
+
 - Understanding Django models.
 - Creating an Employee model.
 - Defining database fields such as:
@@ -39,17 +41,20 @@ Through this project, I gained practical experience in connecting the frontend w
 - Understanding how Django models represent database tables.
 
 ### 3. Database Operations
+
 - Storing employee information in the database.
-- Fetching records from the database using Django ORM.
+- Fetching records using Django ORM.
 - Passing database records from views to HTML templates.
 - Displaying dynamic employee information on web pages.
 
 ### 4. Django Admin Panel
+
 - Exploring the Django Admin interface.
 - Managing employee records through the admin panel.
 - Viewing and updating database entries.
 
 ### 5. Dynamic Employee Details Page
+
 - Implementing an employee details page.
 - Fetching individual employee records using their ID.
 - Displaying employee information dynamically.
@@ -67,7 +72,7 @@ Displaying employee records fetched from the database in a dynamic HTML table.
 
 Managing employee records through Django's built-in administration panel.
 
-![Django Admin](images/django-admin.png)
+![Django Admin Panel](images/django-admin.png)
 
 ### 3. Employee Details Page
 
@@ -77,7 +82,9 @@ Displaying complete employee information, including the employee photo, by fetch
 
 ## 🎯 Key Takeaways
 
-This project helped me understand how backend development works in practice. I learned how to:
+This project helped me understand how backend development works in practice.
+
+I learned how to:
 
 - Create and manage Django models.
 - Work with databases using Django ORM.
