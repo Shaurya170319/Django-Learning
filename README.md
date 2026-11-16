@@ -72,7 +72,7 @@ Displaying employee records fetched from the database in a dynamic HTML table.
 
 Managing employee records through Django's built-in administration panel.
 
-![Django Admin Panel](images/django-admin.png)
+![Django Admin Panel](images/employee-admin.png)
 
 ### 3. Employee Details Page
 
