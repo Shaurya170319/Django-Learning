@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            margin: 0;
+            padding: 25px;
+        }
+
+        .heading {
+            background: #173f69;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 32px;
+        }
+
+        .employee-card {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            border: 2px solid #4285ed;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 1300px;
+            margin: 30px auto;
+            box-shadow: 0 5px 12px #ccc;
+        }
+
+        .employee-photo {
+            width: 30%;
+            height: 440px;
+            object-fit: cover;
+            border: 2px solid #4285ed;
+            border-radius: 12px;
+        }
+
+        .details {
+            width: 70%;
+            border-collapse: collapse;
+            font-size: 21px;
+        }
+
+        .details td {
+            padding: 14px;
+            border: 1px solid #ddd;
+        }
+
+        .details td:first-child {
+            background: #eaf3fc;
+            color: #173f69;
+            font-weight: bold;
+            width: 40%;
+        }
+
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 35px auto;
+            padding: 18px 35px;
+            background: #0751a5;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+
+        .back:hover {
+            background: #173f69;
+        }
+
+        @media(max-width: 750px) {
+            .employee-card {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .employee-photo,
+            .details {
+                width: 100%;
+            }
+
+            .employee-photo {
+                height: 300px;
+            }
+
+            .details {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="heading">👥 Employee Details</h1>
+
+    <div class="employee-card">
+
+        {% if employee.photo %}
+            <img src="{{ employee.photo.url }}"
+                 class="employee-photo"
+                 alt="Employee Photo">
+        {% else %}
+            <p>No Photo Available</p>
+        {% endif %}
+
+        <table class="details">
+
+            <tr>
+                <td>Employee ID:</td>
+                <td>{{ employee.Employee_id|stringformat:"04d" }}</td>
+            </tr>
+
+            <tr>
+                <td>First Name:</td>
+                <td>{{ employee.first_name }}</td>
+            </tr>
+
+            <tr>
+                <td>Last Name:</td>
+                <td>{{ employee.last_name }}</td>
+            </tr>
+
+            <tr>
+                <td>Email Address:</td>
+                <td>{{ employee.email_address }}</td>
+            </tr>
+
+            <tr>
+                <td>Phone Number:</td>
+                <td>{{ employee.phone_number }}</td>
+            </tr>
+
+            <tr>
+                <td>Created At:</td>
+                <td>{{ employee.created_at|date:"d-m-Y H:i" }}</td>
+            </tr>
+
+            <tr>
+                <td>Last Updated:</td>
+                <td>{{ employee.updated_at|date:"d-m-Y H:i" }}</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <a href="{% url 'home' %}" class="back">
+        ← Back to Employee List
+    </a>
+
+</body>
+</html>
